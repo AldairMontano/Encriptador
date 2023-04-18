@@ -36,11 +36,39 @@ let llaves = {
   };
   
   //funcion para encriptar
-  function encriptar() {
-    let texto = document.getElementById("encriptar").value.toLocaleLowerCase();
-    return texto.replace(/[aeiou]/g, function(llave) {
+  const encriptar = ()  => {
+    let texto = document.getElementById("textoOriginal").value.toLocaleLowerCase();
+    let textoEncriptado = texto.replace(/[aeiou]/gm, function(llave) {
       return llaves[llave];
     });
+    let textoDesencriptado = document.getElementById("textoEncriptado");
+    textoDesencriptado.value = textoEncriptado;
+    return textoEncriptado;
+  }
+  
+  
+  //Obtenemos el boton del html para enlazar la función de encriptar
+  let botonEncrip = document.getElementById("encriptar");
+  botonEncrip.addEventListener("click", function(event) {
+    encriptar();
+  })
+  
+  //funcion para desencriptar mensaje.
+  const desencriptar = () => {
+    let texto = document.getElementById("textoEncriptadoOriginal").value.toLocaleLowerCase();
+    let textoDesencriptado = texto
+        .replace(/enter/gm,"e")
+        .replace(/imes/gm,"i")
+        .replace(/ai/gm,"a")
+        .replace(/ober/gm,"o")
+        .replace(/ufat/gm,"u");
+    let textoEncriptado = document.getElementById("textoDesencriptado");
+    textoEncriptado.value = textoDesencriptado;
+    return textoDesencriptado;
   }
 
-  console.log(encriptar());
+  //Obtenemos el boton del html para enlazar la función de desencriptar
+  let botonDesencrip = document.getElementById("desencriptar");
+  botonDesencrip.addEventListener("click", function(event) {
+    desencriptar();
+  })

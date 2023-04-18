@@ -13,17 +13,28 @@
       <section>
         <form>
           <fieldset>
-            <label for="encriptar">Encriptar</label>
-            <input type="text" id="encriptar" required placeholder="Ingrese el texto aqui"/ value="gato">
-            <button class="encriptar">Encriptar</button>
-            <button class="desencriptar">Desencriptar</button>
+            <label for="textoOriginal">Ingrese el mensaje a encriptar</label>
+            <input type="text" id="textoOriginal" placeholder="Ingrese el texto">
+
+            <label for="textoEncriptado">Texto Encriptado</label>
+            <input type="text" id="textoEncriptado"> 
+          </fieldset>
+          
+          
+          <fieldset>
+            <label for="textoEncriptadoOriginal">Ingrese el mensaje a desencriptar</label>
+            <input type="text" id="textoEncriptadoOriginal" placeholder="Ingrese el texto">
+
+            <label for="textoDesencriptado">Texto Desencriptado</label>
+            <input type="text" id="textoDesencriptado">
+          </fieldset>
+          
+          <fieldset>
+            <button type="button" id="encriptar">Encriptar</button>
+            <button type="button" class="desencriptar" id="desencriptar">Desencriptar</button>
+            <button type="button" class="copiar" id="copiar">Copiar</button>
           </fieldset>
 
-          <fieldset>
-            <label for="desencriptar">Desencriptar</label>
-            <input type="text" name="desencriptar" id="desencriptar" />
-            <button class="copiar">Copiar</button>
-          </fieldset>
         </form>
       </section>
     </main>
