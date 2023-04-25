@@ -4,44 +4,56 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Encriptador</title>
   </head>
   <body>
     <header></header>
 
     <main>
-      <section>
+      <header>
+        <div class="imagen">
+          <img src="./assets/Logo.png" alt="Logo" />
+        </div>
+
+        <div class="titulo">
+          <h1>Encriptador - Desencriptador</h1>
+        </div>
+      </header>
+
+      <section class="encriptador">
         <form>
-          <fieldset>
+          <fieldset class="seleccion">
+            <label for="seleccionar">Encriptar/Desencriptar</label>
+            <button type="button" id="seleccionar">Desencriptar</button>
+          </fieldset>
+
+          <fieldset class="mensaje">
             <label for="textoOriginal">Ingrese el mensaje a encriptar</label>
-            <input type="text" id="textoOriginal" placeholder="Ingrese el texto">
+            <input
+              type="text"
+              id="textoOriginal"
+              placeholder="Ingrese el texto"
+            />
 
-            <label for="textoEncriptado">Texto Encriptado</label>
-            <input type="text" id="textoEncriptado"> 
+            <label for="textoModificado">Texto Modificado</label>
+            <input type="text" id="textoModificado" />
           </fieldset>
-          
-          
-          <fieldset>
-            <label for="textoEncriptadoOriginal">Ingrese el mensaje a desencriptar</label>
-            <input type="text" id="textoEncriptadoOriginal" placeholder="Ingrese el texto">
 
-            <label for="textoDesencriptado">Texto Desencriptado</label>
-            <input type="text" id="textoDesencriptado">
-          </fieldset>
-          
-          <fieldset>
+          <fieldset class="botones">
             <button type="button" id="encriptar">Encriptar</button>
-            <button type="button" class="desencriptar" id="desencriptar">Desencriptar</button>
+            <button type="button" class="desencriptar" id="desencriptar">
+              Desencriptar
+            </button>
             <button type="button" class="copiar" id="copiar">Copiar</button>
           </fieldset>
-
         </form>
       </section>
     </main>
 
     <footer>
-        <script src="./logica.js"></script>
-        <p>@2023 Aldair Montaño Chávez</p>
+      <script src="./logica.js"></script>
+      <p>@2023 Aldair Montaño Chávez</p>
     </footer>
   </body>
 </html>
