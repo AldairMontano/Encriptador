@@ -30,24 +30,24 @@
     <section class="contenedor">
       <form class="form">
 
-        <fieldset class="section">
-          <label class="seleccionar" for="seleccionar">Encriptar/Desencriptar</label>
+        <fieldset class="section selec_funcion">
+          <label class="letrero_modo" for="seleccionar">Elige el modo</label>
           <button class="boton_Selec" type="button" id="seleccionar">Desencriptar</button>
         </fieldset>
 
         <fieldset class="section" id="tarjeta">
           <div class="modulos">
             <label class="subtitulo" for="textoOriginal">Ingrese el mensaje a encriptar</label>
-            <textarea class="mensaje" name="textoOriginal" id="textoOriginal" cols="30"
-              rows="10">Ingrese el mensaje</textarea>
+            <textarea class="mensaje" name="textoOriginal" id="textoOriginal" cols="30" rows="10" required autofocus
+              placeholder="Ingrese el mensaje"></textarea>
           </div>
 
           <div class="modulos">
-            <label class="subtitulo" for="textoModificado">Texto Modificado</label>
-            <input class="mensaje" type="text" id="textoModificado" />
+            <textarea class="mensaje modificado" name="textoModificado" id="textoModificado" cols="30"
+              rows="10"></textarea>
           </div>
 
-          <div class="modulos">
+          <div class="modulos_boton">
             <button class="boton" type="button" id="encriptar">
               Encriptar
             </button>
