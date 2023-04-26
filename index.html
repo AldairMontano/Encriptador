@@ -1,59 +1,73 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Encriptador</title>
-  </head>
-  <body>
-    <header></header>
 
-    <main>
-      <header>
-        <div class="imagen">
-          <img src="./assets/Logo.png" alt="Logo" />
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Encriptador</title>
+</head>
 
-        <div class="titulo">
-          <h1>Encriptador - Desencriptador</h1>
-        </div>
-      </header>
+<body>
+  <header></header>
 
-      <section class="encriptador">
-        <form>
-          <fieldset class="seleccion">
-            <label for="seleccionar">Encriptar/Desencriptar</label>
-            <button type="button" id="seleccionar">Desencriptar</button>
-          </fieldset>
+  <main>
+    <header>
+      <div class="imagen">
+        <img src="./assets/Logo.png" alt="Logo" />
+      </div>
 
-          <fieldset class="mensaje">
-            <label for="textoOriginal">Ingrese el mensaje a encriptar</label>
-            <input
-              type="text"
-              id="textoOriginal"
-              placeholder="Ingrese el texto"
-            />
+      <div class="titulo">
+        <h1>Encriptador - Desencriptador</h1>
+      </div>
+    </header>
 
-            <label for="textoModificado">Texto Modificado</label>
-            <input type="text" id="textoModificado" />
-          </fieldset>
+    <div class="fondo_contenedor">
+      <canvas class="fondo"> </canvas>
+    </div>
 
-          <fieldset class="botones">
-            <button type="button" id="encriptar">Encriptar</button>
-            <button type="button" class="desencriptar" id="desencriptar">
+    <section class="contenedor">
+      <form class="form">
+
+        <fieldset class="section">
+          <label class="seleccionar" for="seleccionar">Encriptar/Desencriptar</label>
+          <button class="boton_Selec" type="button" id="seleccionar">Desencriptar</button>
+        </fieldset>
+
+        <fieldset class="section" id="tarjeta">
+          <div class="modulos">
+            <label class="subtitulo" for="textoOriginal">Ingrese el mensaje a encriptar</label>
+            <textarea class="mensaje" name="textoOriginal" id="textoOriginal" cols="30"
+              rows="10">Ingrese el mensaje</textarea>
+          </div>
+
+          <div class="modulos">
+            <label class="subtitulo" for="textoModificado">Texto Modificado</label>
+            <input class="mensaje" type="text" id="textoModificado" />
+          </div>
+
+          <div class="modulos">
+            <button class="boton" type="button" id="encriptar">
+              Encriptar
+            </button>
+            <button class="boton" type="button" class="desencriptar" id="desencriptar">
               Desencriptar
             </button>
-            <button type="button" class="copiar" id="copiar">Copiar</button>
-          </fieldset>
-        </form>
-      </section>
-    </main>
+            <button class="boton" type="button" class="copiar" id="copiar">
+              Copiar
+            </button>
+          </div>
+        </fieldset>
 
-    <footer>
-      <script src="./logica.js"></script>
-      <p>@2023 Aldair Montaño Chávez</p>
-    </footer>
-  </body>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <script src="./logica.js"></script>
+    <p>@2023 Aldair Montaño Chávez</p>
+  </footer>
+</body>
+
 </html>
