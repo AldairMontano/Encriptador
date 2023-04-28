@@ -34,7 +34,7 @@ const encriptar = () => {
   if (texto.length == 0) {
     alert("No ingresaste ningun mensaje");
     return;
-  }˝
+  }
   textoEncriptado.value = texto.replace(/[aeiou]/gm, function (llave) {
     return llaves[llave];
   });
