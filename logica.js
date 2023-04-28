@@ -34,7 +34,7 @@ const encriptar = () => {
   if (texto.length == 0) {
     alert("No ingresaste ningun mensaje");
     return;
-  }
+  }˝
   textoEncriptado.value = texto.replace(/[aeiou]/gm, function (llave) {
     return llaves[llave];
   });
@@ -98,10 +98,14 @@ const modalidad = () => {
 
 //función para ocultar el boton dependiendo de la modalidad de la pagina.
 const seleccionar = () => {
+  let letrero = document.getElementById("subtitulo");
+
   if (selec.textContent == "Desencriptar") {
     botonDesencrip.style.display = "none";
+    letrero.textContent = "Ingrese el mensaje a encriptar";
   } else {
     botonEncrip.style.display = "none";
+    letrero.textContent = "Ingrese el mensaje a desencriptar";
   }
 };
 

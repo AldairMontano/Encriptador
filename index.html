@@ -36,24 +36,24 @@
         </fieldset>
 
         <fieldset class="section" id="tarjeta">
+          <div class="titulo_form">
+            <legend class="subtitulo" id="subtitulo">Ingrese el mensaje a encriptar</legend>
+          </div>
+
           <div class="modulos">
-            <label class="subtitulo" for="textoOriginal">Ingrese el mensaje a encriptar</label>
             <textarea class="mensaje" name="textoOriginal" id="textoOriginal" cols="30" rows="10" required autofocus
               placeholder="Ingrese el mensaje"></textarea>
-          </div>
-
-          <div class="modulos">
-            <textarea class="mensaje modificado" name="textoModificado" id="textoModificado" cols="30"
-              rows="10"></textarea>
-          </div>
-
-          <div class="modulos_boton">
             <button class="boton" type="button" id="encriptar">
               Encriptar
             </button>
             <button class="boton" type="button" class="desencriptar" id="desencriptar">
               Desencriptar
             </button>
+          </div>
+
+          <div class="modulos">
+            <textarea class="mensaje modificado" name="textoModificado" id="textoModificado" cols="30"
+              rows="10"></textarea>
             <button class="boton" type="button" class="copiar" id="copiar">
               Copiar
             </button>
