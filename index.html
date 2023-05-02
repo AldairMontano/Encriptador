@@ -10,30 +10,27 @@
 </head>
 
 <body>
-  <header></header>
+  <header>
+    <div class="imagen">
+      <img src="./assets/Logo.png" alt="Logo" />
+    </div>
+
+    <div class="titulo">
+      <h1>Encriptador - Desencriptador</h1>
+    </div>
+
+    <div class="cont_boton">
+      <button class="boton_Selec" type="button" id="seleccionar">Desencriptar</button>
+    </div>
+  </header>
 
   <main>
-    <header>
-      <div class="imagen">
-        <img src="./assets/Logo.png" alt="Logo" />
-      </div>
-
-      <div class="titulo">
-        <h1>Encriptador - Desencriptador</h1>
-      </div>
-    </header>
-
     <div class="fondo_contenedor">
       <canvas class="fondo"> </canvas>
     </div>
 
     <section class="contenedor">
       <form class="form">
-
-        <fieldset class="section selec_funcion">
-          <label class="letrero_modo" for="seleccionar">Elige el modo</label>
-          <button class="boton_Selec" type="button" id="seleccionar">Desencriptar</button>
-        </fieldset>
 
         <fieldset class="section" id="tarjeta">
           <div class="titulo_form">
@@ -52,14 +49,13 @@
           </div>
 
           <div class="modulos">
-            <textarea class="mensaje modificado" name="textoModificado" id="textoModificado" cols="30"
-              rows="10"></textarea>
+            <textarea class="mensaje modificado" name="textoModificado" id="textoModificado" cols="30" rows="10"
+              readonly></textarea>
             <button class="boton" type="button" class="copiar" id="copiar">
               Copiar
             </button>
           </div>
         </fieldset>
-
       </form>
     </section>
   </main>
